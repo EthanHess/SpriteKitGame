@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6B9B5EF395A4D8EDB925BDD02BDA87388CC88229",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "810FFBFE827690FF69CFD0F76C5B90F3A7E3112A" : 0,
+    "6B9B5EF395A4D8EDB925BDD02BDA87388CC88229" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1FE8C717-3239-485D-8100-A026B54488B7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "810FFBFE827690FF69CFD0F76C5B90F3A7E3112A" : "",
+    "6B9B5EF395A4D8EDB925BDD02BDA87388CC88229" : "SpriteKit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FlappyBirdObjC",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FlappyBirdObjC\/FlappyBirdObjC.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/EthanHess\/SpriteKitGame.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6B9B5EF395A4D8EDB925BDD02BDA87388CC88229"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/EthanHess\/RecipeDiary.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "810FFBFE827690FF69CFD0F76C5B90F3A7E3112A"
+    }
+  ]
+}

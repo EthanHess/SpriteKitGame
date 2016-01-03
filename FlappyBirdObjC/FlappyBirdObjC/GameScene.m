@@ -38,8 +38,8 @@
     
     //textures
     
-    SKTexture *birdTexture = [SKTexture textureWithImage:[UIImage imageNamed:@""]];
-    SKTexture *birdTextureTwo = [SKTexture textureWithImage:[UIImage imageNamed:@""]];
+    SKTexture *birdTexture = [SKTexture textureWithImage:[UIImage imageNamed:@"flappy1.png"]];
+    SKTexture *birdTextureTwo = [SKTexture textureWithImage:[UIImage imageNamed:@"flappy2.png"]];
     
     SKAction *action = [SKAction animateWithTextures:@[birdTexture, birdTextureTwo] timePerFrame:1.0];
     SKAction *makeBirdFlap = [SKAction repeatActionForever:action];
@@ -60,7 +60,7 @@
     
     //adds ground physics body at bottom of screen
     
-    SKNode *ground = [SKNode alloc];
+    SKNode *ground = [[SKNode alloc]init];
     ground.position = CGPointMake(0, 0);
     ground.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(self.view.frame.size.width, 1)];
     ground.physicsBody.dynamic = NO;
@@ -91,7 +91,7 @@
     
     //pipeTexture
     
-    SKTexture *pipeTexture = [SKTexture textureWithImage:[UIImage imageNamed:@""]];
+    SKTexture *pipeTexture = [SKTexture textureWithImage:[UIImage imageNamed:@"pipe1.png"]];
     self.pipeOne = [SKSpriteNode spriteNodeWithTexture:pipeTexture];
     self.pipeOne.position = CGPointMake(CGRectGetMidX(self.frame) + self.frame.size.width, CGRectGetMidY(self.frame) + pipeTexture.size.height / 2 + gapHeight / 2 + pipeOffSet);
     [self.pipeOne runAction:moveAndRemovePipes];
@@ -106,7 +106,7 @@
     [self.movingObjects addChild:self.pipeOne];
     [self addChild:self.movingObjects];
     
-    SKTexture *pipeTextureTwo = [SKTexture textureWithImage:[UIImage imageNamed:@""]];
+    SKTexture *pipeTextureTwo = [SKTexture textureWithImage:[UIImage imageNamed:@"pipe2.png"]];
     self.pipeTwo = [SKSpriteNode spriteNodeWithTexture:pipeTextureTwo];
     self.pipeTwo.position = CGPointMake(CGRectGetMidX(self.frame) + self.frame.size.width, CGRectGetMidY(self.frame) - pipeTextureTwo.size.height / 2 - gapHeight / 2 + pipeOffSet);
     [self.pipeTwo runAction:moveAndRemovePipes];
@@ -141,7 +141,7 @@
 
 - (void)makeBackground {
     
-    SKTexture *backgroundTexture = [SKTexture textureWithImage:[UIImage imageNamed:@""]];
+    SKTexture *backgroundTexture = [SKTexture textureWithImage:[UIImage imageNamed:@"bg.png"]];
     
     SKAction *moveBackground = [SKAction moveByX: - backgroundTexture.size.width y:0 duration:0];
     SKAction *replaceBackground = [SKAction moveByX:backgroundTexture.size.width y:0 duration:0];
@@ -167,7 +167,28 @@
 
 - (void)didBeginContact:(SKPhysicsContact *)contact {
     
-    //todo, fill method
+    if (contact.bodyA.collisionBitMask == Gap || contact.bodyB.collisionBitMask == Gap) {
+        
+        self.score ++;
+        self.scoreLabel.text = [NSString stringWithFormat:@"%d", self.score];
+    }
+    
+    else {
+       
+        if (self.gameOver == NO) {
+            
+            self.gameOver = YES;
+            self.speed = 0;
+            
+            self.gameOverLabel.fontName = @"Helvetica";
+            self.gameOverLabel.fontSize = 30;
+            self.gameOverLabel.text = @"Game Over! Tap to play again...";
+            self.gameOverLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+            [self.labelContainer addChild:self.gameOverLabel];
+            [self addChild:self.labelContainer];
+        }
+    }
+    
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -183,7 +204,15 @@
         self.score = 0;
         self.scoreLabel.text = @"0";
         
+        self.bird.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        self.bird.physicsBody.velocity = CGVectorMake(0, 0);
         
+        [self.movingObjects removeAllChildren];
+        [self makeBackground];
+        
+        self.speed = 1;
+        self.gameOver = NO;
+        [self.labelContainer removeAllChildren]; 
     }
     
 }

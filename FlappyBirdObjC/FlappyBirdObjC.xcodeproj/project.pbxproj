@@ -15,6 +15,11 @@
 		2735214B1C38CE0B00722B0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273521491C38CE0B00722B0F /* Main.storyboard */; };
 		2735214D1C38CE0B00722B0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2735214C1C38CE0B00722B0F /* Assets.xcassets */; };
 		273521501C38CE0B00722B0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2735214E1C38CE0B00722B0F /* LaunchScreen.storyboard */; };
+		2735215D1C39E7A100722B0F /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 273521581C39E7A100722B0F /* bg.png */; settings = {ASSET_TAGS = (); }; };
+		2735215E1C39E7A100722B0F /* flappy1.png in Resources */ = {isa = PBXBuildFile; fileRef = 273521591C39E7A100722B0F /* flappy1.png */; settings = {ASSET_TAGS = (); }; };
+		2735215F1C39E7A100722B0F /* flappy2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2735215A1C39E7A100722B0F /* flappy2.png */; settings = {ASSET_TAGS = (); }; };
+		273521601C39E7A100722B0F /* pipe1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2735215B1C39E7A100722B0F /* pipe1.png */; settings = {ASSET_TAGS = (); }; };
+		273521611C39E7A100722B0F /* pipe2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2735215C1C39E7A100722B0F /* pipe2.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		2735214C1C38CE0B00722B0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2735214F1C38CE0B00722B0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		273521511C38CE0B00722B0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		273521581C39E7A100722B0F /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		273521591C39E7A100722B0F /* flappy1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flappy1.png; sourceTree = "<group>"; };
+		2735215A1C39E7A100722B0F /* flappy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flappy2.png; sourceTree = "<group>"; };
+		2735215B1C39E7A100722B0F /* pipe1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe1.png; sourceTree = "<group>"; };
+		2735215C1C39E7A100722B0F /* pipe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +80,11 @@
 				273521441C38CE0B00722B0F /* GameScene.sks */,
 				273521461C38CE0B00722B0F /* GameViewController.h */,
 				273521471C38CE0B00722B0F /* GameViewController.m */,
+				273521581C39E7A100722B0F /* bg.png */,
+				273521591C39E7A100722B0F /* flappy1.png */,
+				2735215A1C39E7A100722B0F /* flappy2.png */,
+				2735215B1C39E7A100722B0F /* pipe1.png */,
+				2735215C1C39E7A100722B0F /* pipe2.png */,
 				273521491C38CE0B00722B0F /* Main.storyboard */,
 				2735214C1C38CE0B00722B0F /* Assets.xcassets */,
 				2735214E1C38CE0B00722B0F /* LaunchScreen.storyboard */,
@@ -144,10 +159,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2735215F1C39E7A100722B0F /* flappy2.png in Resources */,
+				2735215D1C39E7A100722B0F /* bg.png in Resources */,
 				273521451C38CE0B00722B0F /* GameScene.sks in Resources */,
+				273521601C39E7A100722B0F /* pipe1.png in Resources */,
 				273521501C38CE0B00722B0F /* LaunchScreen.storyboard in Resources */,
+				273521611C39E7A100722B0F /* pipe2.png in Resources */,
 				2735214D1C38CE0B00722B0F /* Assets.xcassets in Resources */,
 				2735214B1C38CE0B00722B0F /* Main.storyboard in Resources */,
+				2735215E1C39E7A100722B0F /* flappy1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +328,7 @@
 				273521561C38CE0B00722B0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
